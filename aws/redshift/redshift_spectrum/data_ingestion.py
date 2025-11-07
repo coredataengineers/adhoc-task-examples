@@ -5,14 +5,14 @@ from faker import Faker
 
 
 session = boto3.Session(
-            aws_access_key_id="xxxxxx",
-            aws_secret_access_key="xxxxxxxx",
+            aws_access_key_id="xxxx",
+            aws_secret_access_key="xxxxx",
             region_name="eu-north-1"
         )
 
 sample = Faker()
 
-bunch_of_profiles = [sample.profile() for profile in range(2)]
+bunch_of_profiles = [sample.profile() for profile in range(1000)]
 profiles_df = pd.DataFrame(bunch_of_profiles)
 
 
